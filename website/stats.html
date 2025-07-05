@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的统计 - 健身记录</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">健身π</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="record.html">开始记录</a></li>
+                    <li><a href="stats.html" class="active">我的统计</a></li>
+                </ul>
+            </nav>
+            <div class="user-info">
+                <span id="welcome-message"></span>
+                <button id="logout-btn">退出</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>我的健身记录</h2>
+        <div class="stats-summary">
+            <div class="summary-item">
+                <h3>总运动次数</h3>
+                <p id="total-count">0</p>
+            </div>
+            <div class="summary-item">
+                <h3>总时长 (分钟)</h3>
+                <p id="total-duration">0</p>
+            </div>
+            <div class="summary-item">
+                <h3>总消耗 (大卡)</h3>
+                <p id="total-calories">0</p>
+            </div>
+        </div>
+        <div class="record-list-container">
+            <table id="record-table">
+                <thead>
+                    <tr>
+                        <th>日期</th>
+                        <th>运动类型</th>
+                        <th>时长 (分钟)</th>
+                        <th>消耗 (大卡)</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody id="record-list">
+                    <!-- 记录将由JavaScript动态插入 -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 健身记录. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script> <!-- 复用main.js检查登录和退出 -->
+    <script src="js/stats.js"></script>
+</body>
+</html> 
